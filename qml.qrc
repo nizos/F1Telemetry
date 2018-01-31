@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>test.qml</file>
+        <file>images/F1Gauge.png</file>
+        <file>images/F1Gauge2.png</file>
+        <file>images/F1GaugeBottomBackground.png</file>
+        <file>images/F1GaugeDRSBackground.png</file>
+        <file>images/F1GaugeDRSField.png</file>
+        <file>images/F1GaugeSpeedField.png</file>
+        <file>images/F1GaugeThrottleBrakeBackground.png</file>
+        <file>images/F1GaugeThrottleBrakeField.png</file>
+        <file>images/F1GaugeDRSFieldBackground.png</file>
+        <file>images/F1GaugeRPMBackground.png</file>
+        <file>images/F1GaugeRPMFieldBackground.png</file>
+        <file>images/F1GaugeRPMForeground.png</file>
+        <file>images/F1GaugeSpeedFieldBackground.png</file>
+        <file>images/F1GaugeThrottleBrakeFieldBackground.png</file>
+    </qresource>
+</RCC>
