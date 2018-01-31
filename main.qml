@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 2.3
 import QtQuick.Extras 1.4
 import QtQuick.Controls.Styles 1.4
+import App.Classes.Core 1.0
 
 Window {
     id: f1Overlay
