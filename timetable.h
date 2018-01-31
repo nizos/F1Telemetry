@@ -9,52 +9,52 @@ public:
     // Default constructor
     TimeTable();
 
-    // Overloaded constructor
-    TimeTable(int drivers, int laps, int checkPoints, double trackSize);
+//    // Overloaded constructor
+//    TimeTable(int drivers, int laps, int checkPoints, double trackSize);
 
 
-    // Methods
-    void initializeTable();
-    void updateTable();
-    void clearTable();
-    void registerTime(int driver, int lapNumber, int checkPointNumber, int nrOfCheckPoints, double raceTime);
-    int getTableColumnNr(int lapNumber, int checkPointNumber, int nrOfCheckPoints);
+//    // Methods
+//    void initializeTable();
+//    void updateTable();
+//    void clearTable();
+//    void registerTime(int driver, int lapNumber, int checkPointNumber, int nrOfCheckPoints, double raceTime);
+//    int getTableColumnNr(int lapNumber, int checkPointNumber, int nrOfCheckPoints);
 
 
-    // Getters
+//    // Getters
 
 
-    // Setters
-    void setTelemetry(Telemetry* telemetry);
-    void setDrivers(int drivers, int driver[]);
-    void setTrackSize(double trackSize);
-    void setCheckPoints(int checkPoints);
-    void setCheckPointDistance(double trackSize, int checkPoints);
+//    // Setters
+//    void setTelemetry(Telemetry* telemetry);
+//    void setDrivers(int drivers, int driver[]);
+//    void setTrackSize(double trackSize);
+//    void setCheckPoints(int checkPoints);
+//    void setCheckPointDistance(double trackSize, int checkPoints);
 
-private:
-    // Drivers
-    int driver[];
-    int nrOfDrivers;
+//private:
+//    // Drivers
+//    int driver[];
+//    int nrOfDrivers;
 
-    // Track
-    double trackSize;
+//    // Track
+//    double trackSize;
 
-    // Laps
-    int lap[];
-    int nrOfLaps;
+//    // Laps
+//    int lap[];
+//    int nrOfLaps;
 
-    // Check Points
-    int checkPoint[];
-    int prevCheckPoint[];
-    int nrOfCheckPoints;
-    double distanceBetweenCheckPoints;
-    double checkPointPosition[];
+//    // Check Points
+//    int checkPoint[];
+//    int prevCheckPoint[];
+//    int nrOfCheckPoints;
+//    double distanceBetweenCheckPoints;
+//    double checkPointPosition[];
 
-    // Times
-    double timeTable[][];
+//    // Times
+//    double timeTable[][20];
 
-    // Telemetry
-    Telemetry* telemetry;
+//    // Telemetry
+//    Telemetry* telemetry;
 };
 
 #endif // TIMETABLE_H

@@ -15,7 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp \
     telemetry.cpp \
     timetable.cpp \
-    app.cpp
+    telemetryapp.cpp
 
 RESOURCES += qml.qrc
 
@@ -28,6 +28,8 @@ QML_DESIGNER_IMPORT_PATH =
 
 QT_QUICK_CONTROLS_1_STYLE=Flat ./app
 
+QT_AUTO_SCREEN_SCALE_FACTOR=1 ./app
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
@@ -36,4 +38,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     telemetry.h \
     timetable.h \
-    app.h
+    curssorprovider.h \
+    telemetryapp.h
+
+DISTFILES +=
