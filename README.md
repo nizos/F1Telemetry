@@ -8,8 +8,10 @@ https://clips.twitch.tv/DepressedProudDiscFeelsBadMan
 ## App demonstration:
 https://streamable.com/pzbnp
 
-## Screen shot:
+## Screen shots:
 ![alt text](https://i.imgur.com/VlxnhZS.png "Main view")
+![alt text](https://i.imgur.com/kebnisM.png "In use")
+
 
 
 ## How to use:
