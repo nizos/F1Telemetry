@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-    QQuickWindow *wnd1 = engine.rootObjects()[0]->findChild<QQuickWindow *>("mainWindow");
+    QQuickWindow *wnd1 = engine.rootObjects()[0]->findChild<QQuickWindow *>("controlsWindow");
         if(wnd1)
             wnd1->setTitle("TELEMETRY HUD");
         QQuickWindow *wnd2 = engine.rootObjects()[0]->findChild<QQuickWindow *>("overlayWindow");

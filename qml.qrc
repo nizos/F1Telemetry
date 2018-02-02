@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>test.qml</file>
+        <file>TempControlsWindow.qml</file>
         <file>images/F1Gauge.png</file>
         <file>images/F1Gauge2.png</file>
         <file>images/F1GaugeBottomBackground.png</file>
@@ -16,13 +16,27 @@
         <file>images/F1GaugeRPMForeground.png</file>
         <file>images/F1GaugeSpeedFieldBackground.png</file>
         <file>images/F1GaugeThrottleBrakeFieldBackground.png</file>
-        <file>WindowControls.qml</file>
         <file>fonts/fa-brands-400.ttf</file>
         <file>fonts/fa-regular-400.ttf</file>
         <file>fonts/fa-solid-900.ttf</file>
         <file>fonts/fontawesome-webfont.ttf</file>
         <file>test2.qml</file>
+    </qresource>
+    <qresource prefix="/panels">
+        <file>AboutPanel.qml</file>
+        <file>AppearancePanel.qml</file>
+        <file>CustomizationPanel.qml</file>
+        <file>UnitsPanel.qml</file>
+        <file>UserPanel.qml</file>
+    </qresource>
+    <qresource prefix="/elements">
+        <file>TitleBar.qml</file>
+    </qresource>
+    <qresource prefix="/Windows">
+        <file>ControlsWindow.qml</file>
+        <file>OverlayWindow.qml</file>
+    </qresource>
+    <qresource prefix="/overlays">
         <file>HUDGauge.qml</file>
-        <file>SettingsPanel.qml</file>
     </qresource>
 </RCC>

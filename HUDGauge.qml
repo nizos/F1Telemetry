@@ -14,8 +14,275 @@ Rectangle {
     visible: true
     width: 800
     height: 800
+    antialiasing: true
     color: "Transparent"
     signal refresh;
+    
+    //// Customization
+    // Gauge: Steering
+    property string gaugeSteerGaugeFillColor
+    property string gaugeSteerGaugeBorderColor
+    property string gaugeSteerGaugeBorderWidth
+    property string gaugeSteerGaugeRadius
+    property string gaugeSteerGaugeHeight
+    property string gaugeSteerGaugeWidth
+
+    // BackGround: Gauge Bottom Background
+    property string gaugeBottomBackgroundColor
+    property string gaugeBottomBackgroundVisible
+    property string gaugeBottomBackgroundOpacity
+
+    // Gauge: Speed
+    property string gaugeSpeedGaugeColor
+    property string gaugeSpeedGaugeOpacity
+    property string gaugeSpeedGaugeInitialColor
+    property string gaugeSpeedGaugeFinalColor
+    property string gaugeSpeedGaugeMajorTickmarkWidth
+    property string gaugeSpeedGaugeMajorTickmarkStepSize
+    property string gaugeSpeedGaugeMajorTickmarkColor
+    property string gaugeSpeedGaugeMinorTickmarkWidth
+    property string gaugeSpeedGaugeMinorTickmarkStepSize
+    property string gaugeSpeedGaugeMinorTickmarkColor
+    property string gaugeSpeedGaugeStartColor
+    property string gaugeSpeedGaugeMidLowColor
+    property string gaugeSpeedGaugeMidColor
+    property string gaugeSpeedGaugeMidHighColor
+    property string gaugeSpeedGaugeEndColor
+    property string gaugeSpeedGaugeStartValue
+    property string gaugeSpeedGaugeMidLowValue
+    property string gaugeSpeedGaugeMidValue
+    property string gaugeSpeedGaugeMidHighValue
+    property string gaugeSpeedGaugeEndValue
+
+    // ForeGround: Speed Foreground
+    property string gaugeSpeedForegroundColor
+    property string gaugeSpeedForegroundVisible
+    property string gaugeSpeedForegroundOpacity
+
+    // Background: DRS Background
+    property string gaugeDRSBackgroundColor
+    property string gaugeDRSBackgroundVisible
+    property string gaugeDRSBackgroundOpacity
+
+    // Background: DRS Light Background
+    property string gaugeDRSLightOnBackgroundColor
+    property string gaugeDRSLightOnBackgroundOpacity
+    property string gaugeDRSLightOnBackgroundVisible
+    property string gaugeDRSLightOffBackgroundColor
+    property string gaugeDRSLightOffBackgroundOpacity
+    property string gaugeDRSLightOffBackgroundVisible
+    property string gaugeDRSLightAvailableBackgroundColor
+    property string gaugeDRSLightAvailableBackgroundOpacity
+    property string gaugeDRSLightAvailableBackgroundVisible
+    property string gaugeDRSLightOnTextColor
+    property string gaugeDRSLightOnTextOpacity
+    property string gaugeDRSLightOnTextSize
+    property string gaugeDRSLightOnTextBold
+    property string gaugeDRSLightOnTextVisible
+    property string gaugeDRSLightOnTextSpacing
+    property string gaugeDRSLightOffTextColor
+    property string gaugeDRSLightOffTextOpacity
+    property string gaugeDRSLightOffTextSize
+    property string gaugeDRSLightOffTextBold
+    property string gaugeDRSLightOffTextVisible
+    property string gaugeDRSLightOffTextSpacing
+    property string gaugeDRSLightAvailableTextColor
+    property string gaugeDRSLightAvailableTextOpacity
+    property string gaugeDRSLightAvailableTextSize
+    property string gaugeDRSLightAvailableTextBold
+    property string gaugeDRSLightAvailableTextVisible
+    property string gaugeDRSLightAvailableTextSpacing
+
+    // Foreground: DRS Field
+    property string gaugeDRSFieldColor
+    property string gaugeDRSFieldVisible
+    property string gaugeDRSFieldOpacity
+
+    // Background: RPM Field Background
+    property string gaugeRPMFieldBackgroundColor
+    property string gaugeRPMFieldBackgroundVisible
+    property string gaugeRPMFieldBackgroundOpacity
+
+    // Gauge: RPM Gauge
+    property string gaugeRPMGaugeColor
+    property string gaugeRPMGaugeOpacity
+    property string gaugeRPMGaugeVisible
+    property string gaugeRPMGaugeStartColor
+    property string gaugeRPMGaugeMidLowColor
+    property string gaugeRPMGaugeMidColor
+    property string gaugeRPMGaugeMidHighColor
+    property string gaugeRPMGaugeEndColor
+    property string gaugeRPMGaugeStartValue
+    property string gaugeRPMGaugeMidLowValue
+    property string gaugeRPMGaugeMidValue
+    property string gaugeRPMGaugeMidHighValue
+    property string gaugeRPMGaugeEndValue
+
+    // Background: Throttle & Brake Background
+    property string gaugeThrottleBrakeBackgroundColor
+    property string gaugeThrottleBrakeBackgroundVisible
+    property string gaugeThrottleBrakeBackgroundOpacity
+
+    // Gauge: Brake Gauge
+    property string gaugeBrakeGaugeColor
+    property string gaugeBrakeGaugeOpacity
+    property string gaugeBrakeGaugeInitialColor
+    property string gaugeBrakeGaugeFinalColor
+    property string gaugeBrakeGaugeMajorTickmarkWidth
+    property string gaugeBrakeGaugeMajorTickmarkStepSize
+    property string gaugeBrakeGaugeMajorTickmarkColor
+    property string gaugeBrakeGaugeMinorTickmarkWidth
+    property string gaugeBrakeGaugeMinorTickmarkStepSize
+    property string gaugeBrakeGaugeMinorTickmarkColor
+    property string gaugeBrakeGaugeStartColor
+    property string gaugeBrakeGaugeMidLowColor
+    property string gaugeBrakeGaugeMidColor
+    property string gaugeBrakeGaugeMidHighColor
+    property string gaugeBrakeGaugeEndColor
+    property string gaugeBrakeGaugeStartValue
+    property string gaugeBrakeGaugeMidLowValue
+    property string gaugeBrakeGaugeMidValue
+    property string gaugeBrakeGaugeMidHighValue
+    property string gaugeBrakeGaugeEndValue
+
+
+    // Gauge: Throttle Gauge
+    property string gaugeThrottleGaugeColor
+    property string gaugeThrottleGaugeOpacity
+    property string gaugeThrottleGaugeInitialColor
+    property string gaugeThrottleGaugeFinalColor
+    property string gaugeThrottleGaugeMajorTickmarkWidth
+    property string gaugeThrottleGaugeMajorTickmarkStepSize
+    property string gaugeThrottleGaugeMajorTickmarkColor
+    property string gaugeThrottleGaugeMinorTickmarkWidth
+    property string gaugeThrottleGaugeMinorTickmarkStepSize
+    property string gaugeThrottleGaugeMinorTickmarkColor
+    property string gaugeThrottleGaugeStartColor
+    property string gaugeThrottleGaugeMidLowColor
+    property string gaugeThrottleGaugeMidColor
+    property string gaugeThrottleGaugeMidHighColor
+    property string gaugeThrottleGaugeEndColor
+    property string gaugeThrottleGaugeStartValue
+    property string gaugeThrottleGaugeMidLowValue
+    property string gaugeThrottleGaugeMidValue
+    property string gaugeThrottleGaugeMidHighValue
+    property string gaugeThrottleGaugeEndValue
+
+    // Background: Throttle & Brake Field
+    property string gaugeThrottleBrakeFieldColor
+    property string gaugeThrottleBrakeFieldVisible
+    property string gaugeThrottleBrakeFieldOpacity
+
+    // Foreground: RPM Foreground
+    property string gaugeRPMForegroundColor
+    property string gaugeRPMForegroundVisible
+    property string gaugeRPMForegroundOpacity
+
+    // Label: DRS Text Label
+    property string gaugeDRSTextLabelColor
+    property string gaugeDRSTextLabelVisible
+    property string gaugeDRSTextLabelOpacity
+    property string gaugeDRSTextLabelSize
+    property string gaugeDRSTextLabelBold
+    property string gaugeDRSTextLabelItalic
+    property string gaugeDRSTextLabelUnderline
+    property string gaugeDRSTextLabelLetterSpacing
+    property string gaugeDRSTextLabelFont
+    property string gaugeDRSTextLabelText
+
+    // Text: Speed
+    property string gaugeSpeedTextValueColor
+    property string gaugeSpeedTextValueVisible
+    property string gaugeSpeedTextValueOpacity
+    property string gaugeSpeedTextValueSize
+    property string gaugeSpeedTextValueBold
+    property string gaugeSpeedTextValueItalic
+    property string gaugeSpeedTextValueUnderline
+    property string gaugeSpeedTextValueLetterSpacing
+    property string gaugeSpeedTextValueFont
+    property string gaugeSpeedTextValueText
+
+    // Label: Speed
+    property string gaugeSpeedTextLabelColor
+    property string gaugeSpeedTextLabelVisible
+    property string gaugeSpeedTextLabelOpacity
+    property string gaugeSpeedTextLabelSize
+    property string gaugeSpeedTextLabelBold
+    property string gaugeSpeedTextLabelItalic
+    property string gaugeSpeedTextLabelUnderline
+    property string gaugeSpeedTextLabelLetterSpacing
+    property string gaugeSpeedTextLabelFont
+    property string gaugeSpeedTextLabelText
+    property bool gaugeSpeedTextLabelKMH
+
+
+
+    // Label: Lap Nr.
+    property string gaugeLapNrLabelColor
+    property string gaugeLapNrLabelVisible
+    property string gaugeLapNrLabelOpacity
+    property string gaugeLapNrLabelSize
+    property string gaugeLapNrLabelBold
+    property string gaugeLapNrLabelItalic
+    property string gaugeLapNrLabelUnderline
+    property string gaugeLapNrLabelLetterSpacing
+    property string gaugeLapNrLabelFont
+    property string gaugeLapNrLabelText
+
+    // Text: Lap Nr.
+    property string gaugeLapNrTextColor
+    property string gaugeLapNrTextVisible
+    property string gaugeLapNrTextOpacity
+    property string gaugeLapNrTextSize
+    property string gaugeLapNrTextBold
+    property string gaugeLapNrTextItalic
+    property string gaugeLapNrTextUnderline
+    property string gaugeLapNrTextLetterSpacing
+    property string gaugeLapNrTextFont
+    property string gaugeLapNrTextText
+
+
+    // Label: Position
+    property string gaugePositionLabelColor
+    property string gaugePositionLabelVisible
+    property string gaugePositionLabelOpacity
+    property string gaugePositionLabelSize
+    property string gaugePositionLabelBold
+    property string gaugePositionLabelItalic
+    property string gaugePositionLabelUnderline
+    property string gaugePositionLabelLetterSpacing
+    property string gaugePositionLabelFont
+    property string gaugePositionLabelText
+
+    // Text: Position
+    property string gaugePositionTextColor
+    property string gaugePositionTextVisible
+    property string gaugePositionTextOpacity
+    property string gaugePositionTextSize
+    property string gaugePositionTextBold
+    property string gaugePositionTextItalic
+    property string gaugePositionTextUnderline
+    property string gaugePositionTextLetterSpacing
+    property string gaugePositionTextFont
+    property string gaugePositionTextText
+
+
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+//    property string speedGaugeColor
+
+
+
+
 
     // Vehicle
     property int currentIndex: 0
@@ -75,11 +342,13 @@ Rectangle {
     Rectangle {
         id: customWindowFrame
         color: "Transparent"
+        antialiasing: true
         anchors.fill: parent
         property QtObject container
         MouseArea {
             id: titleBarMouseRegion
             property var clickPos
+            antialiasing: true
             anchors.fill: parent
             onPressed: {
                 clickPos = { x: mouse.x, y: mouse.y }
@@ -144,6 +413,7 @@ Rectangle {
     {
         id: background
         color: "Transparent"
+        antialiasing: true
         //        color: "#000000"
         anchors.fill: parent
     }
@@ -155,6 +425,7 @@ Rectangle {
         y: 101
         width: 700
         height: 700
+        antialiasing: true
         value: overlayWindow.gaugeSteer
         minimumValue: -1
         maximumValue: 1
@@ -206,10 +477,11 @@ Rectangle {
         id: f1GaugeBottomBackground
         width: 800
         height: 800
+        antialiasing: true
         fillMode: Image.PreserveAspectFit
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeBottomBackground.png"
+        source: "qrc:/images/F1GaugeBottomBackground.png"
     }
 
     CircularGauge // Gauge: Speed
@@ -219,6 +491,7 @@ Rectangle {
         y: 101
         width: 627
         height: 600
+        antialiasing: true
         maximumValue: 360
         value: overlayWindow.gaugeSpeed
         style: CircularGaugeStyle
@@ -285,10 +558,11 @@ Rectangle {
         id: f1GaugeSpeedField
         width: 800
         height: 800
+        antialiasing: true
         fillMode: Image.PreserveAspectFit
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeSpeedField.png"
+        source: "qrc:/images/F1GaugeSpeedField.png"
     }
 
     Image // Background: DRS Background
@@ -296,10 +570,11 @@ Rectangle {
         id: f1GaugeDRSBackground
         width: 800
         height: 800
+        antialiasing: true
         fillMode: Image.PreserveAspectFit
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeDRSBackground.png"
+        source: "qrc:/images/F1GaugeDRSBackground.png"
     }
 
     Rectangle // Background: DRS Light Background
@@ -332,10 +607,11 @@ Rectangle {
         id: f1GaugeDRSField
         width: 800
         height: 800
+        antialiasing: true
         fillMode: Image.PreserveAspectFit
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeDRSField.png"
+        source: "qrc:/images/F1GaugeDRSField.png"
     }
 
     Image // Background: RPM Field Background
@@ -343,9 +619,10 @@ Rectangle {
         id: rpmFieldBackground
         width: 800
         height: 800
+        antialiasing: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeRPMFieldBackground.png"
+        source: "qrc:/images/F1GaugeRPMFieldBackground.png"
     }
 
     Gauge // Gauge: RPM Gauge
@@ -429,10 +706,11 @@ Rectangle {
         id: f1GaugeThrottleBrakeBackground
         width: 800
         height: 800
+        antialiasing: true
         fillMode: Image.PreserveAspectFit
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeThrottleBrakeFieldBackground.png"
+        source: "qrc:/images/F1GaugeThrottleBrakeFieldBackground.png"
     }
 
     CircularGauge // Gauge: Brake Gauge
@@ -442,6 +720,7 @@ Rectangle {
         y: 161
         width: 500
         height: 500
+        antialiasing: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         maximumValue: 1
@@ -512,6 +791,7 @@ Rectangle {
         y: 154
         width: 500
         height: 500
+        antialiasing: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
         stepSize: 0
@@ -581,10 +861,11 @@ Rectangle {
         id: f1GaugeThrottleBrakeField
         width: 800
         height: 800
+        antialiasing: true
         fillMode: Image.PreserveAspectFit
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeThrottleBrakeField.png"
+        source: "qrc:/images/F1GaugeThrottleBrakeField.png"
     }
 
     Image // Foreground: RPM Foreground
@@ -592,9 +873,10 @@ Rectangle {
         id: rpmForeground
         width: 800
         height: 800
+        antialiasing: true
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        source: "images/F1GaugeRPMForeground.png"
+        source: "qrc:/images/F1GaugeRPMForeground.png"
     }
 
     Text // Label: DRS Text Label
@@ -640,26 +922,25 @@ Rectangle {
     Grid // Grid: Lap times
     {
         id: timeGrid
-        x: 308
-        y: 346
+        x: 305
+        y: 359
         width: 221
         height: 109
+        antialiasing: true
         clip: true
         rows: 3
-        columns: 3
-        spacing: 2
+        columns: 2
+        spacing: 5
 
         Text // Label: Best Lap Time
         {
             id: bestTimeLabel
-            width: 100
+            width: 65
             color: "#9e9c9c"
             text: qsTr("Best:")
             font.capitalization: Font.AllUppercase
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignLeft
-            anchors.top: parent.top
-            anchors.topMargin: 10
             font.pixelSize: 24
         }
 
@@ -671,10 +952,6 @@ Rectangle {
             color: "#ffffff"
             text: overlayWindow.timeFormatter(overlayWindow.bestLapTime)
             verticalAlignment: Text.AlignVCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 70
-            anchors.top: parent.top
-            anchors.topMargin: 10
             font.pixelSize: 24
 
         }
@@ -683,13 +960,11 @@ Rectangle {
         Text // Label: Last Lap Time
         {
             id: lastTimeLabel
-            width: 200
+            width: 65
             color: "#9e9c9c"
             text: qsTr("Last:")
             font.capitalization: Font.AllUppercase
             verticalAlignment: Text.AlignVCenter
-            anchors.top: bestTimeLabel.bottom
-            anchors.topMargin: 5
             font.pixelSize: 24
         }
 
@@ -701,10 +976,6 @@ Rectangle {
             color: "#ffffff"
             text: overlayWindow.timeFormatter(overlayWindow.lastLapTime)
             verticalAlignment: Text.AlignVCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 70
-            anchors.top: bestTimeValue.bottom
-            anchors.topMargin: 5
             font.pixelSize: 24
         }
 
@@ -712,13 +983,11 @@ Rectangle {
         Text // Label: Current Lap Time
         {
             id: currentLapLabel
-            width: 200
+            width: 65
             color: "#9e9c9c"
             text: qsTr("TIME:")
             font.capitalization: Font.AllUppercase
             verticalAlignment: Text.AlignVCenter
-            anchors.top: lastTimeLabel.bottom
-            anchors.topMargin: 5
             font.pixelSize: 24
         }
 
@@ -728,10 +997,6 @@ Rectangle {
             id: currentLapValue
             color: "#ffffff"
             text: overlayWindow.timeFormatter(overlayWindow.currentLapTime)
-            anchors.left: parent.left
-            anchors.leftMargin: 70
-            anchors.top: lastTimeValue.bottom
-            anchors.topMargin: 5
             font.pixelSize: 24
         }
     }
@@ -743,6 +1008,7 @@ Rectangle {
         y: 359
         width: 76
         height: 100
+        antialiasing: true
         spacing: 12
         rows: 2
         columns: 2
@@ -821,6 +1087,7 @@ Rectangle {
         id: gearsListView
         width: 300
         height: 86
+        antialiasing: true
         clip: true
         anchors.verticalCenterOffset: 108
         anchors.horizontalCenterOffset: 0
@@ -999,6 +1266,7 @@ Rectangle {
         y: 359
         width: 76
         height: 100
+        antialiasing: true
         spacing: 12
         columns: 2
         rows: 2

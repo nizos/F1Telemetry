@@ -2,14 +2,24 @@ import QtQuick 2.10
 import QtQuick.Window 2.2
 
 Rectangle {
-    id: customWindowFrame
+    id: titleBar
     color: "#003459"
     height: 30
     anchors.top: parent.top
     anchors.left: parent.left
     anchors.right: parent.right
     radius: 5
+    signal windowClose
+    signal windowMinimize
+    signal windowRestore
     property QtObject container
+
+    // Icons font loader
+    FontLoader {
+        id: fontAwesome
+        source: "qrc:/fonts/fontawesome-webfont.ttf"
+    }
+
     MouseArea {
         id: titleBarMouseRegion
         property var clickPos
@@ -18,8 +28,8 @@ Rectangle {
             clickPos = { x: mouse.x, y: mouse.y }
         }
         onPositionChanged: {
-            mainWindow.x = mousePosition.cursorPos().x - clickPos.x
-            mainWindow.y = mousePosition.cursorPos().y - clickPos.y
+            controlsWindow.x = mousePosition.cursorPos().x - clickPos.x
+            controlsWindow.y = mousePosition.cursorPos().y - clickPos.y
         }
     }
 
@@ -56,9 +66,7 @@ Rectangle {
             hoverEnabled: true
             onEntered: closeWindowButtonIcon.color = "#FFFFFF";
             onExited: closeWindowButtonIcon.color = "#c4c4c4";
-            onClicked: {
-                mainWindow.close();
-            }
+            onClicked: windowClose()
         }
     }
 
@@ -86,19 +94,7 @@ Rectangle {
             hoverEnabled: true
             onEntered: resizeWindowButtonIcon.color = "#FFFFFF";
             onExited: resizeWindowButtonIcon.color = "#c4c4c4";
-            onClicked: {
-                if(mainWindow.visibility === Window.FullScreen)
-                {
-
-                    mainWindow.visibility = Window.Windowed;
-
-                }
-                else if(mainWindow.visibility === Window.Windowed)
-                {
-                    mainWindow.visibility = Window.FullScreen;
-
-                }
-            }
+            onClicked: windowRestore()
         }
     }
     Rectangle {
@@ -123,7 +119,7 @@ Rectangle {
             id: minimizeWindowButtonMouseArea
             anchors.fill: parent
             hoverEnabled: true
-            onClicked: mainWindow.visibility = Window.Minimized;
+            onClicked: windowMinimize()
             onEntered: minimizeWindowButtonIcon.color = "#FFFFFF";
             onExited: minimizeWindowButtonIcon.color = "#c4c4c4";
         }
